@@ -20,19 +20,30 @@ minutes, all day:
    computes first/last-seen times, min/max altitude, and closest-approach
    distance to Trabzon. Writes `data/daily/<UTC-date>.json` (overwritten on
    every poll) and `content/days/<UTC-date>.md`.
-3. **Commit**: pushes the updated data and content files.
-4. **Build & deploy**: `hugo --minify` builds the site, which is deployed to
+3. **Live feed**: `scripts/tar1090_feed.py` writes a current-position
+   snapshot and a rolling 24-hour window of history chunks in
+   [readsb](https://github.com/wiedehopf/readsb)'s own JSON format, consumed
+   directly by the vendored [tar1090](https://github.com/wiedehopf/tar1090)
+   web interface at `/tar1090/` — no server process required, tar1090 is
+   pure client-side JS fetching relative JSON files.
+4. **Commit**: pushes the updated data and content files.
+5. **Build & deploy**: `hugo --minify` builds the site, which is deployed to
    GitHub Pages.
 
 The day-boundary and all timestamps use UTC throughout.
 
 ## Site structure
 
-- `/` — archive of all days, reverse chronological.
+- `/` — archive of all days, reverse chronological, plus a link to the live
+  view.
+- `/tar1090/` — live, rolling 24-hour map view (vendored tar1090, pinned to
+  commit `9508b4e1dd2400039b76c971880eebdd89cacc61`; re-vendor manually to
+  pick up upstream updates — there's no automatic update mechanism).
 - `/days/<date>/` — per-day table (callsign, hex, registration, type,
   first/last seen, altitude, closest approach to Trabzon) plus a Leaflet map
   showing the query radius, the Trabzon reference point, and each flight's
-  track.
+  track. This is the permanent archive; tar1090's live view only shows a
+  rolling 24-hour window, not indexed by calendar date.
 
 No flight origin/destination data is shown — `api.adsb.lol` doesn't provide
 it, so the site only reports observed position, altitude, and timing.
@@ -53,11 +64,14 @@ hugo server     # local preview with live reload
 ## Repo layout
 
 ```
-scripts/          Python data pipeline (poll, aggregate, tests)
-data/raw/          Raw per-poll sightings, one JSONL file per UTC day
-data/daily/        Aggregated per-day flight tracks (JSON)
-content/days/      Generated Hugo content pages, one per day
-layouts/           Hugo templates (homepage, day page)
-static/js/map.js   Leaflet map rendering
-.github/workflows/ The poll → build → deploy workflow
+scripts/               Python data pipeline (poll, aggregate, tar1090 feed, tests)
+data/raw/               Raw per-poll sightings, one JSONL file per UTC day
+data/daily/             Aggregated per-day flight tracks (JSON)
+content/days/           Generated Hugo content pages, one per day
+layouts/                Hugo templates (homepage, day page)
+static/js/map.js        Leaflet map rendering for the daily archive pages
+static/tar1090/         Vendored tar1090 live-view web interface
+static/tar1090/data/    Generated current-snapshot feed (aircraft.json, receiver.json)
+static/tar1090/chunks/  Generated rolling 24h history chunks
+.github/workflows/      The poll → build → deploy workflow
 ```
