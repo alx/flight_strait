@@ -546,6 +546,216 @@
         }
       ],
       "closest_trabzon_nm": 141.1
+    },
+    {
+      "hex": "151feb",
+      "flight": "AFL2155",
+      "registration": "RA-73707",
+      "type": "A321",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 33025,
+      "alt_max": 33025,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 39.823334,
+          "lon": 36.957291,
+          "alt": 33025,
+          "track": 67.81,
+          "gs": 521.6
+        }
+      ],
+      "closest_trabzon_nm": 147.3
+    },
+    {
+      "hex": "151e1b",
+      "flight": "PBD964",
+      "registration": "RA-73243",
+      "type": "B738",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 37000,
+      "alt_max": 37000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 39.975494,
+          "lon": 37.323242,
+          "alt": 37000,
+          "track": 60.7,
+          "gs": 525.2
+        }
+      ],
+      "closest_trabzon_nm": 128.2
+    },
+    {
+      "hex": "14fc06",
+      "flight": "RWZ015",
+      "registration": "RA-64518",
+      "type": "T204",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 33975,
+      "alt_max": 33975,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 40.266103,
+          "lon": 38.005891,
+          "alt": 33975,
+          "track": 241.39,
+          "gs": 401.0
+        }
+      ],
+      "closest_trabzon_nm": 92.3
+    },
+    {
+      "hex": "4b9e4b",
+      "flight": "STW063",
+      "registration": "TC-GRK",
+      "type": "B38M",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 35000,
+      "alt_max": 35000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 40.509384,
+          "lon": 38.580872,
+          "alt": 35000,
+          "track": 60.55,
+          "gs": 532.9
+        }
+      ],
+      "closest_trabzon_nm": 62.2
+    },
+    {
+      "hex": "a846fa",
+      "flight": "UPS3",
+      "registration": "N632UP",
+      "type": "B748",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 32000,
+      "alt_max": 32000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.621006,
+          "lon": 38.648242,
+          "alt": 32000,
+          "track": 281.86,
+          "gs": 472.1
+        }
+      ],
+      "closest_trabzon_nm": 63.7
+    },
+    {
+      "hex": "68326f",
+      "flight": "FJK1266",
+      "registration": "UP-EM012",
+      "type": "E35L",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 38000,
+      "alt_max": 38000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.094955,
+          "lon": 38.725281,
+          "alt": 38000,
+          "track": 276.94,
+          "gs": 388.9
+        }
+      ],
+      "closest_trabzon_nm": 48.5
+    },
+    {
+      "hex": "4bc846",
+      "flight": "PGT457H",
+      "registration": "TC-RBF",
+      "type": "A21N",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 5275,
+      "alt_max": 5275,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.107023,
+          "lon": 39.426623,
+          "alt": 5275,
+          "track": 112.99,
+          "gs": 215.1
+        }
+      ],
+      "closest_trabzon_nm": 17.7
+    },
+    {
+      "hex": "4ba9a8",
+      "flight": "THY2QT",
+      "registration": "TC-JMH",
+      "type": "A321",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 16650,
+      "alt_max": 16650,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.183275,
+          "lon": 39.918324,
+          "alt": 16650,
+          "track": 273.45,
+          "gs": 398.7
+        }
+      ],
+      "closest_trabzon_nm": 12.7
+    },
+    {
+      "hex": "4bb213",
+      "flight": "THY254",
+      "registration": "TC-LPS",
+      "type": "A21N",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 33000,
+      "alt_max": 33000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.170624,
+          "lon": 41.625732,
+          "alt": 33000,
+          "track": 101.37,
+          "gs": 522.3
+        }
+      ],
+      "closest_trabzon_nm": 83.8
+    },
+    {
+      "hex": "4bab2f",
+      "flight": "THY60E",
+      "registration": "TC-JYO",
+      "type": "B739",
+      "first_seen": "2026-07-22T17:47:43Z",
+      "last_seen": "2026-07-22T17:47:43Z",
+      "alt_min": 30000,
+      "alt_max": 30000,
+      "track": [
+        {
+          "time": "2026-07-22T17:47:43Z",
+          "lat": 41.955734,
+          "lon": 41.979696,
+          "alt": 30000,
+          "track": 261.51,
+          "gs": 433.7
+        }
+      ],
+      "closest_trabzon_nm": 114.2
     }
   ]
 }
