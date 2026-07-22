@@ -4,9 +4,17 @@ from pathlib import Path
 
 from scripts.aggregate import aggregate_day, write_content_page
 from scripts.poll import append_sighting, poll_once
+from scripts.tar1090_feed import append_chunk, write_receiver_json, write_snapshot
 
 
-def main(raw_dir: Path, daily_dir: Path, content_dir: Path, now=None) -> None:
+def main(
+    raw_dir: Path,
+    daily_dir: Path,
+    content_dir: Path,
+    tar1090_data_dir: Path,
+    tar1090_chunks_dir: Path,
+    now=None,
+) -> None:
     now = now or datetime.now(timezone.utc)
     date = now.strftime("%Y-%m-%d")
     poll_time = now.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -23,6 +31,18 @@ def main(raw_dir: Path, daily_dir: Path, content_dir: Path, now=None) -> None:
 
     write_content_page(date, len(daily_data["flights"]), content_dir)
 
+    ac_list = response.get("ac", [])
+    now_epoch_s = now.timestamp()
+    write_snapshot(ac_list, now_epoch_s, tar1090_data_dir)
+    append_chunk(ac_list, now_epoch_s, tar1090_chunks_dir)
+    write_receiver_json(tar1090_data_dir)
+
 
 if __name__ == "__main__":
-    main(Path("data/raw"), Path("data/daily"), Path("content/days"))
+    main(
+        Path("data/raw"),
+        Path("data/daily"),
+        Path("content/days"),
+        Path("static/tar1090/data"),
+        Path("static/tar1090/chunks"),
+    )
