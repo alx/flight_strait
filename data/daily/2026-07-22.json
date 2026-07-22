@@ -945,6 +945,174 @@
         }
       ],
       "closest_trabzon_nm": 131.2
+    },
+    {
+      "hex": "70e071",
+      "flight": "AIZ1418",
+      "registration": "XU-761",
+      "type": "A320",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 36025,
+      "alt_max": 36025,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 39.919382,
+          "lon": 37.193665,
+          "alt": 36025,
+          "track": 240.66,
+          "gs": 406.1
+        }
+      ],
+      "closest_trabzon_nm": 135.0
+    },
+    {
+      "hex": "4bb26f",
+      "flight": "THY358",
+      "registration": "TC-LSO",
+      "type": "A21N",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 33025,
+      "alt_max": 33025,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 40.055099,
+          "lon": 37.252747,
+          "alt": 33025,
+          "track": 90.55,
+          "gs": 523.0
+        }
+      ],
+      "closest_trabzon_nm": 128.8
+    },
+    {
+      "hex": "71c381",
+      "flight": "AAR548",
+      "registration": "HL8381",
+      "type": "A359",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 39000,
+      "alt_max": 39000,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 41.046753,
+          "lon": 39.4375,
+          "alt": 39000,
+          "track": 100.14,
+          "gs": 556.7
+        }
+      ],
+      "closest_trabzon_nm": 16.2
+    },
+    {
+      "hex": "44cc46",
+      "flight": "BEL7DB",
+      "registration": "OO-SBF",
+      "type": "A20N",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 37000,
+      "alt_max": 37000,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 40.804276,
+          "lon": 39.54541,
+          "alt": 37000,
+          "track": 107.46,
+          "gs": 520.0
+        }
+      ],
+      "closest_trabzon_nm": 15.9
+    },
+    {
+      "hex": "4408ff",
+      "flight": "BCS517",
+      "registration": "OE-IFD",
+      "type": "B744",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 32000,
+      "alt_max": 32000,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 41.458099,
+          "lon": 39.903405,
+          "alt": 32000,
+          "track": 281.46,
+          "gs": 453.0
+        }
+      ],
+      "closest_trabzon_nm": 28.3
+    },
+    {
+      "hex": "71c362",
+      "flight": "AAR522",
+      "registration": "HL8362",
+      "type": "A359",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 35000,
+      "alt_max": 35000,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 41.823089,
+          "lon": 40.664041,
+          "alt": 35000,
+          "track": 83.16,
+          "gs": 571.1
+        }
+      ],
+      "closest_trabzon_nm": 63.4
+    },
+    {
+      "hex": "789246",
+      "flight": "CPA238",
+      "registration": "B-LXN",
+      "type": "A35K",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 37000,
+      "alt_max": 37000,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 41.901111,
+          "lon": 41.453332,
+          "alt": 37000,
+          "track": 81.03,
+          "gs": 571.0
+        }
+      ],
+      "closest_trabzon_nm": 92.6
+    },
+    {
+      "hex": "4bb873",
+      "flight": "PGT100",
+      "registration": "TC-NCS",
+      "type": "A20N",
+      "first_seen": "2026-07-22T20:07:58Z",
+      "last_seen": "2026-07-22T20:07:58Z",
+      "alt_min": 35025,
+      "alt_max": 35025,
+      "track": [
+        {
+          "time": "2026-07-22T20:07:58Z",
+          "lat": 41.398911,
+          "lon": 41.927386,
+          "alt": 35025,
+          "track": 87.49,
+          "gs": 524.5
+        }
+      ],
+      "closest_trabzon_nm": 99.6
     }
   ]
 }
