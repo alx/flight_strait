@@ -1,0 +1,12 @@
+baseURL = "https://example.github.io/flight_strait/"
+languageCode = "en-us"
+title = "Caspian Corridor Flight Tracker"
+
+[params]
+  bakuLat = 40.4675
+  bakuLon = 50.0467
+  turkmenbashiLat = 40.0633
+  turkmenbashiLon = 53.0072
+  queryLat = 40.27
+  queryLon = 51.53
+  queryRadiusNm = 150
