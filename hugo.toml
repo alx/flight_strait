@@ -1,6 +1,7 @@
 baseURL = "https://alx.github.io/flight_strait/"
 languageCode = "en-us"
 title = "Caspian Corridor Flight Tracker"
+ignoreFiles = ['data/raw/.*\.jsonl$']
 
 [params]
   bakuLat = 40.4675
