@@ -55,8 +55,7 @@ def test_aggregate_day_groups_by_hex_and_flight():
     assert flight["alt_min"] == 35000
     assert flight["alt_max"] == 35000
     assert len(flight["track"]) == 2
-    assert flight["closest_baku_nm"] > 0
-    assert flight["closest_turkmenbashi_nm"] > 0
+    assert flight["closest_trabzon_nm"] > 0
 
 
 def test_aggregate_day_with_no_sightings():

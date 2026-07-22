@@ -1,14 +1,13 @@
 (function () {
   var data = JSON.parse(document.getElementById("flight-data").textContent);
-  var refs = window.CASPIAN_REFERENCE_POINTS;
+  var refs = window.MAP_CONFIG;
 
-  var map = L.map("map").setView([refs.baku[0], (refs.baku[1] + refs.turkmenbashi[1]) / 2], 6);
+  var map = L.map("map").setView([refs.reference.lat, refs.reference.lon], 7);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  L.marker(refs.baku).addTo(map).bindPopup("Baku");
-  L.marker(refs.turkmenbashi).addTo(map).bindPopup("Turkmenbashi");
+  L.marker([refs.reference.lat, refs.reference.lon]).addTo(map).bindPopup(refs.reference.label);
 
   if (refs.query) {
     L.circle([refs.query.lat, refs.query.lon], {

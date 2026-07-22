@@ -3,7 +3,7 @@ from pathlib import Path
 
 import requests
 
-QUERY_URL = "https://api.adsb.lol/v2/point/40.27/51.53/150"
+QUERY_URL = "https://api.adsb.lol/v2/point/40.995/39.789/150"
 
 
 def poll_once() -> dict:

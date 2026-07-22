@@ -18,7 +18,7 @@ def test_poll_once_calls_expected_url_and_returns_json(mock_get):
     result = poll_once()
 
     mock_get.assert_called_once_with(
-        "https://api.adsb.lol/v2/point/40.27/51.53/150", timeout=10
+        "https://api.adsb.lol/v2/point/40.995/39.789/150", timeout=10
     )
     assert result == FAKE_RESPONSE
 

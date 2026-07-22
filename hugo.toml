@@ -1,13 +1,11 @@
 baseURL = "https://alx.github.io/flight_strait/"
 languageCode = "en-us"
-title = "Caspian Corridor Flight Tracker"
+title = "Trabzon Overflight Tracker"
 ignoreFiles = ['data/raw/.*\.jsonl$']
 
 [params]
-  bakuLat = 40.4675
-  bakuLon = 50.0467
-  turkmenbashiLat = 40.0633
-  turkmenbashiLon = 53.0072
-  queryLat = 40.27
-  queryLon = 51.53
+  trabzonLat = 40.995
+  trabzonLon = 39.789
+  queryLat = 40.995
+  queryLon = 39.789
   queryRadiusNm = 150

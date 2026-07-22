@@ -2,8 +2,7 @@ from pathlib import Path
 
 from scripts.geo import haversine_nm
 
-BAKU = (40.4675, 50.0467)
-TURKMENBASHI = (40.0633, 53.0072)
+TRABZON = (40.995, 39.789)
 
 
 def aggregate_day(raw_lines: list[dict], date: str) -> dict:
@@ -31,8 +30,7 @@ def aggregate_day(raw_lines: list[dict], date: str) -> dict:
                     "alt_min": ac.get("alt_baro"),
                     "alt_max": ac.get("alt_baro"),
                     "track": [],
-                    "closest_baku_nm": None,
-                    "closest_turkmenbashi_nm": None,
+                    "closest_trabzon_nm": None,
                 },
             )
 
@@ -55,16 +53,10 @@ def aggregate_day(raw_lines: list[dict], date: str) -> dict:
                 }
             )
 
-            dist_baku = haversine_nm(lat, lon, *BAKU)
-            dist_turkmenbashi = haversine_nm(lat, lon, *TURKMENBASHI)
+            dist_trabzon = haversine_nm(lat, lon, *TRABZON)
 
-            if track["closest_baku_nm"] is None or dist_baku < track["closest_baku_nm"]:
-                track["closest_baku_nm"] = round(dist_baku, 1)
-            if (
-                track["closest_turkmenbashi_nm"] is None
-                or dist_turkmenbashi < track["closest_turkmenbashi_nm"]
-            ):
-                track["closest_turkmenbashi_nm"] = round(dist_turkmenbashi, 1)
+            if track["closest_trabzon_nm"] is None or dist_trabzon < track["closest_trabzon_nm"]:
+                track["closest_trabzon_nm"] = round(dist_trabzon, 1)
 
     flights = sorted(tracks.values(), key=lambda t: t["first_seen"])
     return {"date": date, "flights": flights}

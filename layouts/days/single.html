@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <p><a href="{{ "/" | relURL }}">&larr; All days</a></p>
+  <p><a href="{{ .Site.Home.RelPermalink }}">&larr; All days</a></p>
   <h1>{{ .Title }}</h1>
 
   {{ $date := .File.ContentBaseName }}
@@ -18,7 +18,7 @@
         <th>Callsign</th><th>Hex</th><th>Registration</th><th>Type</th>
         <th>First seen (UTC)</th><th>Last seen (UTC)</th>
         <th>Alt min/max (ft)</th>
-        <th>Closest to Baku (nm)</th><th>Closest to Turkmenbashi (nm)</th>
+        <th>Closest to Trabzon (nm)</th>
       </tr>
     </thead>
     <tbody>
@@ -31,8 +31,7 @@
         <td>{{ .first_seen }}</td>
         <td>{{ .last_seen }}</td>
         <td>{{ .alt_min }} / {{ .alt_max }}</td>
-        <td>{{ .closest_baku_nm }}</td>
-        <td>{{ .closest_turkmenbashi_nm }}</td>
+        <td>{{ .closest_trabzon_nm }}</td>
       </tr>
       {{ end }}
     </tbody>
@@ -42,9 +41,8 @@
 
   <script type="application/json" id="flight-data">{{ $day | jsonify }}</script>
   <script>
-    window.CASPIAN_REFERENCE_POINTS = {
-      baku: [{{ .Site.Params.bakuLat }}, {{ .Site.Params.bakuLon }}],
-      turkmenbashi: [{{ .Site.Params.turkmenbashiLat }}, {{ .Site.Params.turkmenbashiLon }}],
+    window.MAP_CONFIG = {
+      reference: {lat: {{ .Site.Params.trabzonLat }}, lon: {{ .Site.Params.trabzonLon }}, label: "Trabzon"},
       query: {lat: {{ .Site.Params.queryLat }}, lon: {{ .Site.Params.queryLon }}, radiusNm: {{ .Site.Params.queryRadiusNm }}}
     };
   </script>
