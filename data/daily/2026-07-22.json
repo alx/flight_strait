@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-22",
+  "flights": [
+    {
+      "hex": "abc123",
+      "flight": "UAL123",
+      "registration": "N12345",
+      "type": "B789",
+      "first_seen": "2026-07-22T10:00:00Z",
+      "last_seen": "2026-07-22T10:20:00Z",
+      "alt_min": 35000,
+      "alt_max": 36000,
+      "track": [
+        {"time": "2026-07-22T10:00:00Z", "lat": 40.2, "lon": 51.0, "alt": 35000, "track": 90, "gs": 480},
+        {"time": "2026-07-22T10:20:00Z", "lat": 40.3, "lon": 51.8, "alt": 36000, "track": 91, "gs": 481}
+      ],
+      "closest_baku_nm": 45.2,
+      "closest_turkmenbashi_nm": 60.1
+    }
+  ]
+}

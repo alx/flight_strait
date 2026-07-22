@@ -1,1 +1,18 @@
-<!-- placeholder: replaced by Task 6's homepage template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Site.Title }}</title>
+</head>
+<body>
+  <h1>{{ .Site.Title }}</h1>
+  <ul>
+    {{ range (where .Site.RegularPages "Section" "days").ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      &mdash; {{ .Params.flight_count }} flight(s)
+    </li>
+    {{ end }}
+  </ul>
+</body>
+</html>
