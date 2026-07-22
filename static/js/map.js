@@ -10,6 +10,12 @@
   L.marker(refs.baku).addTo(map).bindPopup("Baku");
   L.marker(refs.turkmenbashi).addTo(map).bindPopup("Turkmenbashi");
 
+  if (refs.query) {
+    L.circle([refs.query.lat, refs.query.lon], {
+      radius: refs.query.radiusNm * 1852,
+    }).addTo(map);
+  }
+
   var colors = ["#e6194b", "#3cb44b", "#4363d8", "#f58231", "#911eb4", "#46f0f0"];
 
   (data.flights || []).forEach(function (flight, i) {

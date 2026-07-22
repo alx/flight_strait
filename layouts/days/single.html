@@ -44,7 +44,8 @@
   <script>
     window.CASPIAN_REFERENCE_POINTS = {
       baku: [{{ .Site.Params.bakuLat }}, {{ .Site.Params.bakuLon }}],
-      turkmenbashi: [{{ .Site.Params.turkmenbashiLat }}, {{ .Site.Params.turkmenbashiLon }}]
+      turkmenbashi: [{{ .Site.Params.turkmenbashiLat }}, {{ .Site.Params.turkmenbashiLon }}],
+      query: {lat: {{ .Site.Params.queryLat }}, lon: {{ .Site.Params.queryLon }}, radiusNm: {{ .Site.Params.queryRadiusNm }}}
     };
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
