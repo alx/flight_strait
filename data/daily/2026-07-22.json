@@ -1113,6 +1113,90 @@
         }
       ],
       "closest_trabzon_nm": 99.6
+    },
+    {
+      "hex": "71c079",
+      "flight": "AAR502",
+      "registration": "HL8079",
+      "type": "A359",
+      "first_seen": "2026-07-22T21:30:02Z",
+      "last_seen": "2026-07-22T21:30:02Z",
+      "alt_min": 37000,
+      "alt_max": 37000,
+      "track": [
+        {
+          "time": "2026-07-22T21:30:02Z",
+          "lat": 41.336106,
+          "lon": 39.437922,
+          "alt": 37000,
+          "track": 97.62,
+          "gs": 557.9
+        }
+      ],
+      "closest_trabzon_nm": 25.9
+    },
+    {
+      "hex": "471d64",
+      "flight": "WZZ9655",
+      "registration": "HA-LDK",
+      "type": "A21N",
+      "first_seen": "2026-07-22T21:30:02Z",
+      "last_seen": "2026-07-22T21:30:02Z",
+      "alt_min": 35000,
+      "alt_max": 35000,
+      "track": [
+        {
+          "time": "2026-07-22T21:30:02Z",
+          "lat": 40.538956,
+          "lon": 41.09082,
+          "alt": 35000,
+          "track": 115.21,
+          "gs": 511.8
+        }
+      ],
+      "closest_trabzon_nm": 65.2
+    },
+    {
+      "hex": "4d012f",
+      "flight": "CLX515",
+      "registration": "LX-MCL",
+      "type": "B744",
+      "first_seen": "2026-07-22T21:30:02Z",
+      "last_seen": "2026-07-22T21:30:02Z",
+      "alt_min": 30000,
+      "alt_max": 30000,
+      "track": [
+        {
+          "time": "2026-07-22T21:30:02Z",
+          "lat": 40.949799,
+          "lon": 41.313599,
+          "alt": 30000,
+          "track": 272.72,
+          "gs": 463.5
+        }
+      ],
+      "closest_trabzon_nm": 69.2
+    },
+    {
+      "hex": "86e452",
+      "flight": "",
+      "registration": "JA864J",
+      "type": "B789",
+      "first_seen": "2026-07-22T21:30:02Z",
+      "last_seen": "2026-07-22T21:30:02Z",
+      "alt_min": 34975,
+      "alt_max": 34975,
+      "track": [
+        {
+          "time": "2026-07-22T21:30:02Z",
+          "lat": 41.491591,
+          "lon": 42.383976,
+          "alt": 34975,
+          "track": 96.8,
+          "gs": 566.0
+        }
+      ],
+      "closest_trabzon_nm": 120.9
     }
   ]
 }
