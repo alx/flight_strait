@@ -2,7 +2,9 @@ name: Track flights and deploy
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    # GitHub Actions does not guarantee cron timing on public repos; short
+    # intervals like */5 get throttled and often only fire hourly or slower.
+    - cron: "*/15 * * * *"
   workflow_dispatch: {}
 
 permissions:
