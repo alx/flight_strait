@@ -40,3 +40,18 @@ def append_chunk(
             stale_path.unlink()
 
     index_path.write_text(json.dumps({"chunks": chunks}))
+
+
+def write_tar1090_day_page(date: str, content_dir: Path) -> None:
+    content_dir.mkdir(parents=True, exist_ok=True)
+    page_path = content_dir / f"{date}.md"
+    page_path.write_text(f'---\ntitle: "{date}"\ndate: {date}T00:00:00Z\n---\n')
+
+
+def finalize_other_days(days_root: Path, today: str, now_epoch_s: float) -> None:
+    if not days_root.exists():
+        return
+    for day_dir in sorted(days_root.iterdir()):
+        if not day_dir.is_dir() or day_dir.name == today:
+            continue
+        write_snapshot([], now_epoch_s, day_dir / "data")
