@@ -12,6 +12,8 @@
   {{ $date := .File.ContentBaseName }}
   {{ $day := index .Site.Data.daily $date }}
 
+  <div id="map" style="height: 500px;"></div>
+
   <table border="1" cellpadding="4">
     <thead>
       <tr>
@@ -37,9 +39,7 @@
     </tbody>
   </table>
 
-  <div id="map" style="height: 500px;"></div>
-
-  <script type="application/json" id="flight-data">{{ $day | jsonify }}</script>
+  <script type="application/json" id="flight-data">{{ $day | jsonify | safeJS }}</script>
   <script>
     window.MAP_CONFIG = {
       reference: {lat: {{ .Site.Params.trabzonLat }}, lon: {{ .Site.Params.trabzonLon }}, label: "Trabzon"},
