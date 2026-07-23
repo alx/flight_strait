@@ -1,14 +1,24 @@
-name: Track flights and deploy
+name: Build and deploy
 
+# Data polling now happens outside GitHub Actions, on a machine running
+# scripts/poll_cron.sh every 5 minutes (see README.md "Running the poller
+# yourself") — GitHub Actions was throttling the schedule trigger to run
+# every 1-3 hours instead of the configured */5, which was too infrequent.
+# This workflow just builds and deploys whenever that poller pushes data.
 on:
-  schedule:
-    # GitHub Actions does not guarantee cron timing on public repos; short
-    # intervals like */5 get throttled and often only fire hourly or slower.
-    - cron: "*/15 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "content/**"
+      - "layouts/**"
+      - "static/**"
+      - "hugo.toml"
+      - "archetypes/**"
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -22,27 +32,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install Python dependencies
-        run: pip install -r scripts/requirements.txt
-
-      - name: Poll and aggregate
-        run: PYTHONPATH=. python -m scripts.run
-
-      - name: Commit updated data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/raw data/daily content/days static/tar1090/data static/tar1090/chunks
-          git diff --cached --quiet || git commit -m "Update flight data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
