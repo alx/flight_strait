@@ -8,7 +8,6 @@
 <body>
   <p><a href="{{ .Site.Home.RelPermalink }}">&larr; All days</a></p>
   <h1>{{ .Title }}</h1>
-  <p><a href="{{ printf "tar1090/days/%s/" .File.ContentBaseName | relURL }}">View live trace map &rarr;</a></p>
 
   {{ $date := .File.ContentBaseName }}
   {{ $day := index .Site.Data.daily $date }}

@@ -26,11 +26,7 @@ yourself](#running-the-poller-yourself) below). Each run:
    [readsb](https://github.com/wiedehopf/readsb)'s own JSON format, consumed
    directly by the vendored [tar1090](https://github.com/wiedehopf/tar1090)
    web interface at `/tar1090/` — no server process required, tar1090 is
-   pure client-side JS fetching relative JSON files. The same functions
-   also write a permanent, unpruned chunk history per UTC day to
-   `static/tar1090/days/<date>/`, finalized (aircraft list emptied) once the
-   day ends, giving each day a permanent tar1090 trace view at
-   `/tar1090/days/<date>/`.
+   pure client-side JS fetching relative JSON files.
 4. **Commit & push**: the poller commits the updated data/content files and
    pushes to `main`.
 
@@ -50,12 +46,6 @@ The day-boundary and all timestamps use UTC throughout.
 - `/tar1090/` — live, rolling 24-hour map view (vendored tar1090, pinned to
   commit `9508b4e1dd2400039b76c971880eebdd89cacc61`; re-vendor manually to
   pick up upstream updates — there's no automatic update mechanism).
-- `/tar1090/days/<date>/` — permanent, per-day tar1090 trace view: the same
-  map UI as the live view, scoped to one calendar day's full chunk history
-  instead of a trailing 24h window. A thin Hugo-rendered shell
-  (`layouts/tar1090days/single.html`) reuses the shared vendored assets, so
-  each day only adds a small `data/`+`chunks/` JSON folder, not a copy of
-  tar1090 itself. `/tar1090/days/` lists all days.
 - `/days/<date>/` — per-day table (callsign, hex, registration, type,
   first/last seen, altitude, closest approach to Trabzon) plus a Leaflet map
   showing the query radius, the Trabzon reference point, and each flight's
@@ -167,17 +157,15 @@ to update — running it on two machines is redundant but harmless.
 ## Repo layout
 
 ```
-scripts/               Python data pipeline (poll, aggregate, tar1090 feed, backfill, tests)
+scripts/               Python data pipeline (poll, aggregate, tar1090 feed, tests)
 scripts/poll_cron.sh   Self-hosted cron/systemd entry point (poll, commit, push)
 data/raw/               Raw per-poll sightings, one JSONL file per UTC day
 data/daily/             Aggregated per-day flight tracks (JSON)
 content/days/           Generated Hugo content pages, one per day
-content/tar1090days/    Generated Hugo content pages for tar1090 daily views, one per day
-layouts/                Hugo templates (homepage, day page, tar1090 daily shell/index)
+layouts/                Hugo templates (homepage, day page)
 static/js/map.js        Leaflet map rendering for the daily archive pages
 static/tar1090/         Vendored tar1090 live-view web interface
 static/tar1090/data/    Generated current-snapshot feed (aircraft.json, receiver.json)
 static/tar1090/chunks/  Generated rolling 24h history chunks
-static/tar1090/days/    Generated permanent per-day chunk history (one folder per UTC day)
 .github/workflows/      The build → deploy workflow (triggered by the poller's push)
 ```

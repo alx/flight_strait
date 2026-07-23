@@ -22,7 +22,7 @@ git pull --rebase --quiet origin main
 
 PYTHONPATH="$REPO_DIR" "$PYTHON" -m scripts.run
 
-git add data/raw data/daily content/days static/tar1090/data static/tar1090/chunks static/tar1090/days content/tar1090days
+git add data/raw data/daily content/days static/tar1090/data static/tar1090/chunks
 
 if git diff --cached --quiet; then
   echo "No changes to commit."
