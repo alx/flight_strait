@@ -6,6 +6,7 @@
 </head>
 <body>
   <h1>{{ .Site.Title }}</h1>
+  <p><a href="{{ "tar1090/" | relURL }}">Live view &rarr;</a></p>
   <ul>
     {{ range (where .Site.RegularPages "Section" "days").ByDate.Reverse }}
     <li>
