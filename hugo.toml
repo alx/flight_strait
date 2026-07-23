@@ -9,3 +9,6 @@ ignoreFiles = ['data/raw/.*\.jsonl$']
   queryLat = 40.995
   queryLon = 39.789
   queryRadiusNm = 150
+  bakuLat = 40.4093
+  bakuLon = 49.8671
+  corridorToleranceDeg = 30

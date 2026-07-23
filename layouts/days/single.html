@@ -43,7 +43,8 @@
   <script>
     window.MAP_CONFIG = {
       reference: {lat: {{ .Site.Params.trabzonLat }}, lon: {{ .Site.Params.trabzonLon }}, label: "Trabzon"},
-      query: {lat: {{ .Site.Params.queryLat }}, lon: {{ .Site.Params.queryLon }}, radiusNm: {{ .Site.Params.queryRadiusNm }}}
+      query: {lat: {{ .Site.Params.queryLat }}, lon: {{ .Site.Params.queryLon }}, radiusNm: {{ .Site.Params.queryRadiusNm }}},
+      corridor: {lat: {{ .Site.Params.bakuLat }}, lon: {{ .Site.Params.bakuLon }}, toleranceDeg: {{ .Site.Params.corridorToleranceDeg }}}
     };
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
