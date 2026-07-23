@@ -78,14 +78,17 @@ that target `static/tar1090/data` / `static/tar1090/chunks`.
   day naturally produces at most ~288 five-minute-cadence chunks, so this
   ceiling is a safety bound against runaway growth (e.g. a misconfigured
   cron), not a real limit.
-- **Day rollover.** Each poll compares the current UTC date to the date used
-  on the previous poll (derived from existing state — e.g. the most recent
-  entry in `data/raw/`). When the date has changed, the pipeline finalizes
-  the just-ended day by overwriting its `static/tar1090/days/<prev-date>/data/aircraft.json`
-  to an **empty aircraft list** (`write_snapshot([], ...)`), so a finished
-  day's page never shows a "ghost" aircraft frozen at its last observed
-  position — only the completed trail from that day's chunk history.
-  `receiver.json` and the chunk files are untouched by rollover.
+- **Day rollover.** No extra state tracking needed: on every poll, after
+  writing today's snapshot/chunk, the pipeline finalizes every *other*
+  existing `static/tar1090/days/<date>/` directory (i.e. every date
+  directory except today's) by overwriting its `data/aircraft.json` to an
+  **empty aircraft list** (`write_snapshot([], ...)`). This is idempotent —
+  re-emptying an already-empty file on every subsequent poll is a harmless
+  no-op — so it needs no memory of "which date was previous" and
+  self-heals after missed runs or manual reruns. A finished day's page
+  therefore never shows a "ghost" aircraft frozen at its last observed
+  position, only the completed trail from that day's chunk history.
+  `receiver.json` and the chunk files are untouched by finalization.
 - **Backfill.** A new one-time, manually-run script (not part of the
   recurring GitHub Actions pipeline) reconstructs
   `static/tar1090/days/<date>/` for each already-archived day by replaying
