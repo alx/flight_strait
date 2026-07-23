@@ -9,3 +9,6 @@ ignoreFiles = ['data/raw/.*\.jsonl$']
   queryLat = 40.995
   queryLon = 39.789
   queryRadiusNm = 150
+
+[permalinks]
+  tar1090days = "/tar1090/days/:slug/"

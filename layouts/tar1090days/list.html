@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }} &mdash; {{ .Site.Title }}</title>
+</head>
+<body>
+  <p><a href="{{ .Site.Home.RelPermalink }}">&larr; Home</a></p>
+  <h1>{{ .Title }}</h1>
+  <ul>
+    {{ range (where .Site.RegularPages "Section" "tar1090days").ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</body>
+</html>
