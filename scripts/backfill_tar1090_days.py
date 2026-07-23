@@ -1,4 +1,5 @@
 import json
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -12,6 +13,9 @@ from scripts.tar1090_feed import (
 
 def backfill_day(date: str, raw_path: Path, tar1090_days_dir: Path, content_dir: Path) -> None:
     day_dir = tar1090_days_dir / date
+    chunks_dir = day_dir / "chunks"
+    if chunks_dir.exists():
+        shutil.rmtree(chunks_dir)
     lines = [json.loads(line) for line in raw_path.read_text().splitlines() if line]
 
     last_epoch_s = 0.0

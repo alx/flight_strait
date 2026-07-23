@@ -31,6 +31,19 @@ def test_backfill_day_writes_chunks_and_finalized_snapshot(tmp_path):
     assert (content_dir / "2026-07-22.md").exists()
 
 
+def test_backfill_day_is_idempotent_on_rerun(tmp_path):
+    raw_path = tmp_path / "raw" / "2026-07-22.jsonl"
+    _write_raw(raw_path, RAW_LINES)
+    days_dir = tmp_path / "days"
+    content_dir = tmp_path / "content"
+
+    backfill_day("2026-07-22", raw_path, days_dir, content_dir)
+    backfill_day("2026-07-22", raw_path, days_dir, content_dir)
+
+    chunks_index = json.loads((days_dir / "2026-07-22" / "chunks" / "chunks.json").read_text())
+    assert len(chunks_index["chunks"]) == 2
+
+
 def test_backfill_all_skips_the_given_date(tmp_path):
     raw_dir = tmp_path / "raw"
     _write_raw(raw_dir / "2026-07-22.jsonl", RAW_LINES)
