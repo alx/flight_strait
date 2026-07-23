@@ -1319,7 +1319,7 @@
       "registration": "HL8522",
       "type": "A359",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 40000,
       "alt_max": 40000,
       "track": [
@@ -1346,6 +1346,14 @@
           "alt": 40000,
           "track": 275.99,
           "gs": 421.3
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.22736,
+          "lon": 37.061005,
+          "alt": 40000,
+          "track": 275.98,
+          "gs": 422.3
         }
       ],
       "closest_trabzon_nm": 47.1
@@ -1356,7 +1364,7 @@
       "registration": "D-AALA",
       "type": "B77L",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 34000,
       "alt_max": 34000,
       "track": [
@@ -1383,6 +1391,14 @@
           "alt": 34000,
           "track": 276.18,
           "gs": 427.5
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.189209,
+          "lon": 37.5448,
+          "alt": 34000,
+          "track": 272.86,
+          "gs": 421.5
         }
       ],
       "closest_trabzon_nm": 24.8
@@ -1414,7 +1430,7 @@
       "registration": "4K-AZ04",
       "type": "A319",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 37025,
       "alt_max": 37050,
       "track": [
@@ -1441,6 +1457,14 @@
           "alt": 37025,
           "track": 79.35,
           "gs": 546.4
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.282043,
+          "lon": 41.819458,
+          "alt": 37025,
+          "track": 80.03,
+          "gs": 543.2
         }
       ],
       "closest_trabzon_nm": 2.8
@@ -1451,7 +1475,7 @@
       "registration": "SP-LSG",
       "type": "B789",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 37975,
       "alt_max": 38000,
       "track": [
@@ -1478,6 +1502,14 @@
           "alt": 38000,
           "track": 276.65,
           "gs": 431.9
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.154053,
+          "lon": 38.015686,
+          "alt": 38000,
+          "track": 276.27,
+          "gs": 439.6
         }
       ],
       "closest_trabzon_nm": 1.2
@@ -1488,9 +1520,9 @@
       "registration": "TC-VFD",
       "type": "B38M",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 7700,
-      "alt_max": 19800,
+      "alt_max": 29025,
       "track": [
         {
           "time": "2026-07-23T08:44:28Z",
@@ -1515,6 +1547,14 @@
           "alt": 19800,
           "track": 270.64,
           "gs": 358.0
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.119173,
+          "lon": 38.439664,
+          "alt": 29025,
+          "track": 276.32,
+          "gs": 399.4
         }
       ],
       "closest_trabzon_nm": 5.7
@@ -1525,7 +1565,7 @@
       "registration": "RA-73412",
       "type": "B738",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 36000,
       "alt_max": 36000,
       "track": [
@@ -1552,6 +1592,14 @@
           "alt": 36000,
           "track": 242.26,
           "gs": 390.9
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 40.471026,
+          "lon": 38.491038,
+          "alt": 36000,
+          "track": 240.31,
+          "gs": 393.7
         }
       ],
       "closest_trabzon_nm": 2.2
@@ -1620,7 +1668,7 @@
       "registration": "N886FD",
       "type": "B77L",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 35000,
       "alt_max": 35000,
       "track": [
@@ -1647,6 +1695,14 @@
           "alt": 35000,
           "track": 79.91,
           "gs": 559.6
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.378906,
+          "lon": 42.576782,
+          "alt": 35000,
+          "track": 80.69,
+          "gs": 556.3
         }
       ],
       "closest_trabzon_nm": 30.9
@@ -1657,7 +1713,7 @@
       "registration": "TC-LSS",
       "type": "A21N",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 36000,
       "alt_max": 36000,
       "track": [
@@ -1684,6 +1740,14 @@
           "alt": 36000,
           "track": 271.47,
           "gs": 391.1
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.068757,
+          "lon": 39.012139,
+          "alt": 36000,
+          "track": 276.98,
+          "gs": 386.9
         }
       ],
       "closest_trabzon_nm": 1.4
@@ -1694,7 +1758,7 @@
       "registration": "SP-LYF",
       "type": "B38M",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 36000,
       "alt_max": 36000,
       "track": [
@@ -1721,6 +1785,14 @@
           "alt": 36000,
           "track": 258.89,
           "gs": 399.5
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.038032,
+          "lon": 39.346785,
+          "alt": 36000,
+          "track": 276.95,
+          "gs": 396.9
         }
       ],
       "closest_trabzon_nm": 14.7
@@ -1731,7 +1803,7 @@
       "registration": "SU-BUQ",
       "type": "A20N",
       "first_seen": "2026-07-23T08:44:28Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 36000,
       "alt_max": 36000,
       "track": [
@@ -1758,9 +1830,17 @@
           "alt": 36000,
           "track": 259.22,
           "gs": 401.1
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.01592,
+          "lon": 39.933368,
+          "alt": 36000,
+          "track": 258.92,
+          "gs": 395.4
         }
       ],
-      "closest_trabzon_nm": 41.5
+      "closest_trabzon_nm": 6.7
     },
     {
       "hex": "738285",
@@ -1918,7 +1998,7 @@
       "registration": "RA-73705",
       "type": "A21N",
       "first_seen": "2026-07-23T08:50:09Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 34000,
       "alt_max": 34000,
       "track": [
@@ -1929,9 +2009,17 @@
           "alt": 34000,
           "track": 245.51,
           "gs": 407.7
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.388931,
+          "lon": 40.962899,
+          "alt": 34000,
+          "track": 246.34,
+          "gs": 406.1
         }
       ],
-      "closest_trabzon_nm": 93.7
+      "closest_trabzon_nm": 58.1
     },
     {
       "hex": "4d2092",
@@ -1939,9 +2027,9 @@
       "registration": "9H-WMF",
       "type": "A21N",
       "first_seen": "2026-07-23T08:50:09Z",
-      "last_seen": "2026-07-23T08:50:09Z",
+      "last_seen": "2026-07-23T08:55:25Z",
       "alt_min": 15500,
-      "alt_max": 15500,
+      "alt_max": 23925,
       "track": [
         {
           "time": "2026-07-23T08:50:09Z",
@@ -1950,9 +2038,122 @@
           "alt": 15500,
           "track": 261.29,
           "gs": 350.0
+        },
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.889633,
+          "lon": 41.071077,
+          "alt": 23925,
+          "track": 261.22,
+          "gs": 399.7
         }
       ],
-      "closest_trabzon_nm": 107.5
+      "closest_trabzon_nm": 78.8
+    },
+    {
+      "hex": "490db6",
+      "flight": "JME617D",
+      "registration": "CS-CMV",
+      "type": "GLEX",
+      "first_seen": "2026-07-23T08:55:25Z",
+      "last_seen": "2026-07-23T08:55:25Z",
+      "alt_min": 41000,
+      "alt_max": 41000,
+      "track": [
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.207017,
+          "lon": 37.292966,
+          "alt": 41000,
+          "track": 99.05,
+          "gs": 546.8
+        }
+      ],
+      "closest_trabzon_nm": 113.6
+    },
+    {
+      "hex": "4bb159",
+      "flight": "THY6309",
+      "registration": "TC-LJY",
+      "type": "B77L",
+      "first_seen": "2026-07-23T08:55:25Z",
+      "last_seen": "2026-07-23T08:55:25Z",
+      "alt_min": 34000,
+      "alt_max": 34000,
+      "track": [
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.03901,
+          "lon": 39.336048,
+          "alt": 34000,
+          "track": 276.92,
+          "gs": 423.1
+        }
+      ],
+      "closest_trabzon_nm": 20.7
+    },
+    {
+      "hex": "151e15",
+      "flight": "PBD859",
+      "registration": "RA-73237",
+      "type": "B738",
+      "first_seen": "2026-07-23T08:55:25Z",
+      "last_seen": "2026-07-23T08:55:25Z",
+      "alt_min": 36000,
+      "alt_max": 36000,
+      "track": [
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.403002,
+          "lon": 41.006789,
+          "alt": 36000,
+          "track": 246.26,
+          "gs": 399.8
+        }
+      ],
+      "closest_trabzon_nm": 60.2
+    },
+    {
+      "hex": "738443",
+      "flight": "AIZ414",
+      "registration": "4X-AGH",
+      "type": "A21N",
+      "first_seen": "2026-07-23T08:55:25Z",
+      "last_seen": "2026-07-23T08:55:25Z",
+      "alt_min": "ground",
+      "alt_max": "ground",
+      "track": [
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.605637,
+          "lon": 41.610031,
+          "alt": "ground",
+          "track": 95.62,
+          "gs": 0.1
+        }
+      ],
+      "closest_trabzon_nm": 89.9
+    },
+    {
+      "hex": "448466",
+      "flight": "",
+      "registration": "OO-ACF",
+      "type": "B744",
+      "first_seen": "2026-07-23T08:55:25Z",
+      "last_seen": "2026-07-23T08:55:25Z",
+      "alt_min": 36000,
+      "alt_max": 36000,
+      "track": [
+        {
+          "time": "2026-07-23T08:55:25Z",
+          "lat": 41.392136,
+          "lon": 42.68382,
+          "alt": 36000,
+          "track": 260.77,
+          "gs": 442.7
+        }
+      ],
+      "closest_trabzon_nm": 132.9
     }
   ]
 }
